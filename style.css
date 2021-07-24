@@ -1,0 +1,23 @@
+/* Eléments principaux de la page */
+body
+{
+    font-family: 'Raleway', sans-serif;
+    margin: auto;
+}
+
+p
+{
+    font-size: 1em;
+}
+
+h2
+{
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+/* Footer */
+footer
+{
+    background-color: #f2f2f2;
+}
