@@ -2,22 +2,167 @@
 body
 {
     font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+#bloc_page
+{
+    width: 1340px;
     margin: auto;
 }
 
-p
+h1
 {
-    font-size: 1em;
+    font-size: 1.4em;
+    font-weight: 800;
 }
 
 h2
 {
     font-size: 1.1em;
-    font-weight: 700;
+    font-weight: 800;
+}
+p
+{
+    font-size: 1em;
+}
+
+
+/* Header */
+header
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0 10px;
+}
+
+#logo_reservia img
+{
+    width: 95px;
+    height: 40px;
+}
+
+/*Navigation */
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+    font-weight: 600;
+}
+
+nav li
+{
+    margin-right: 69px;
+}
+
+nav a
+{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover
+{
+    color: #0065fc;
+    border-top: #0065fc solid 2px;
+    padding-top: 40px;
+}
+
+#inscription
+{
+    font-weight: bold;
+    color: #0065fc;
+}
+
+/* Filtres */
+#filtres
+{
+    display: flex;
+}
+
+.fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog
+{
+    color: #0065fc;
+    background-color: #deebff;
+    border-radius: 50%;
+    padding: 17px;
+    margin-right: 10px;
+}
+
+#economique, #familial, #romantique, #animaux
+{
+    display: flex;
+    margin-right: 24px;
+    border-radius: 34px;
+    border: #f2f2f2 solid 3px;
+    font-weight: bold;
+}
+
+#economique:hover, #familial:hover, #romantique:hover, #animaux:hover
+{
+    background-color: #f2f2f2;
+}
+
+.fa-money-bill-wave:hover, .fa-child:hover, .fa-heart:hover, .fa-dog:hover
+{
+    background-color: #0065fc;
+    color: #deebff;
+}
+
+#economique, #familial, #romantique, #animaux p
+{
+    padding-right: 22px;
+}
+
+#filtres h2
+{
+    padding-right: 40px;
+}
+
+/* Info */
+#info
+{
+    display: flex;
+    margin-top: 20px;
+    vertical-align: bottom;
+}
+
+#cercle
+{
+    border: #f2f2f2 solid 2px;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    padding: 6px;
+    position: relative;
+}
+.fa-info
+{
+    color: #0065fc;
+    position: absolute;
+    margin: 6px 0 6px 12px;
+}
+
+#info p
+{
+    font-style: normal;
+    margin-left: 12px;
 }
 
 /* Footer */
 footer
 {
     background-color: #f2f2f2;
+}
+
+#bloc_page_footer
+{
+    width: 1340px;
+    margin: auto;
+    display: flex;
+}
+
+#a_propos, #nos_hebergements, #assistance
+{
+    width: 33%;
 }
