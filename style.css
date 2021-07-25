@@ -95,6 +95,7 @@ nav a:hover
     margin-right: 24px;
     border-radius: 34px;
     border: #f2f2f2 solid 3px;
+    border-left-style: none;
     font-weight: bold;
 }
 
@@ -103,7 +104,25 @@ nav a:hover
     background-color: #f2f2f2;
 }
 
-.fa-money-bill-wave:hover, .fa-child:hover, .fa-heart:hover, .fa-dog:hover
+#economique:hover .fa-money-bill-wave
+{
+    background-color: #0065fc;
+    color: #deebff;
+}
+
+#familial:hover .fa-child
+{
+    background-color: #0065fc;
+    color: #deebff;
+}
+
+#romantique:hover .fa-heart
+{
+    background-color: #0065fc;
+    color: #deebff;
+}
+
+#animaux:hover .fa-dog
 {
     background-color: #0065fc;
     color: #deebff;
@@ -116,7 +135,7 @@ nav a:hover
 
 #filtres h2
 {
-    padding-right: 40px;
+    margin-right: 40px;
 }
 
 /* Info */
