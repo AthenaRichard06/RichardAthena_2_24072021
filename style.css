@@ -27,18 +27,24 @@ p
     font-size: 1em;
 }
 
+section a, aside a
+{
+    text-decoration: none;
+    color: black;
+}
+
 
 /* Header */
 header
 {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0 0 10px;
+    padding-top: 20px;
 }
 
 #logo_reservia img
 {
-    width: 95px;
+    width: 96px;
     height: 40px;
 }
 
@@ -74,10 +80,52 @@ nav a:hover
     color: #0065fc;
 }
 
+/* Recherche */
+#zone_recherche
+{
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    margin-bottom: 16px;
+}
+
+.fa-location-dot
+{
+    background-color: #f2f2f2;
+    border-radius: 13px 0 0 13px;
+    padding: 17px;
+}
+
+#formulaire
+{
+    padding: 16px;
+    border-style: none;
+    border-top: #f2f2f2 2px solid;
+    border-bottom: #f2f2f2 2px solid;
+}
+
+#formulaire:focus
+{
+    font-weight: 800;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+}
+
+#bouton_rechercher
+{
+    color: white;
+    font-weight: 800;
+    background-color: #0065fc;
+    padding: 16px;
+    border-radius: 0 13px 13px 0;
+}
+
 /* Filtres */
 #filtres
 {
     display: flex;
+    margin: 16px 0 0 16px;
 }
 
 .fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog
@@ -96,7 +144,7 @@ nav a:hover
     border-radius: 34px;
     border: #f2f2f2 solid 3px;
     border-left-style: none;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 #economique:hover, #familial:hover, #romantique:hover, #animaux:hover
@@ -104,25 +152,7 @@ nav a:hover
     background-color: #f2f2f2;
 }
 
-#economique:hover .fa-money-bill-wave
-{
-    background-color: #0065fc;
-    color: #deebff;
-}
-
-#familial:hover .fa-child
-{
-    background-color: #0065fc;
-    color: #deebff;
-}
-
-#romantique:hover .fa-heart
-{
-    background-color: #0065fc;
-    color: #deebff;
-}
-
-#animaux:hover .fa-dog
+#economique:hover .fa-money-bill-wave, #familial:hover .fa-child, #romantique:hover .fa-heart, #animaux:hover .fa-dog
 {
     background-color: #0065fc;
     color: #deebff;
@@ -142,30 +172,62 @@ nav a:hover
 #info
 {
     display: flex;
-    margin-top: 20px;
-    vertical-align: bottom;
+    align-items: center;
+    margin-top: 16px;
 }
 
 #cercle
 {
-    border: #f2f2f2 solid 2px;
-    border-radius: 50%;
-    width: 12px;
-    height: 12px;
-    padding: 6px;
-    position: relative;
+    height: 34px;
+    width: 34px;
+    min-height: 34px;
+    min-width: 34px;
+    border: solid 2px #f2f2f2;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .fa-info
 {
-    color: #0065fc;
-    position: absolute;
-    margin: 6px 0 6px 12px;
+    display: inline-block;
+    font-weight: 900;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    color: #0065fc
 }
 
 #info p
 {
     font-style: normal;
     margin-left: 12px;
+}
+
+/* Hébergements */
+#hebergements
+{
+    width: 880px;
+    height: 627px;
+}
+
+#encadres_heb
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#grise1, #grise2, #grise3, #grise4, #grise5, #grise6, #grise7
+{
+    color: #f2f2f2;
+}
+
+.fa-star
+{
+    color: #0065fc;
 }
 
 /* Footer */
