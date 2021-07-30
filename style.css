@@ -22,6 +22,13 @@ h2
     font-size: 1.1em;
     font-weight: 800;
 }
+
+h3
+{
+    font-size: 1em;
+    font-weight: 800;
+}
+
 p
 {
     font-size: 1em;
@@ -210,19 +217,45 @@ nav a:hover
 {
     width: 880px;
     height: 627px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 40px;
 }
 
 #encadres_heb
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
 }
 
-#grise1, #grise2, #grise3, #grise4, #grise5, #grise6, #grise7
+#cannebiere img
 {
-    color: #f2f2f2;
+    height: 114px;
+    width: 235px;
+    border-radius: 20px 20px 0 0;
+    border: white 5px solid;
+    margin: auto;
+    position: relative;
+}
+
+#description_cannebiere
+{
+    border: white 5px solid;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+    width: 235px;
+    height: 75px;
+    position: absolute;
+}
+
+#bleu1, #bleu2, #bleu3, #bleu4, #bleu5, #bleu6, #bleu7
+{
+    color: #deebff;
 }
 
 .fa-star
