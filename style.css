@@ -225,33 +225,64 @@ nav a:hover
     padding-left: 40px;
 }
 
+#hebergements h3, #hebergements p, #hebergements i
+{
+    margin-bottom: -3px;
+}
+
 #encadres_heb
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-right: 30px;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 428px;
+    width: 801px;
 }
 
-#cannebiere img
+#cannebiere, #port, #mouettes, #mer, #panier, #amina
+{
+    height: 199px;
+    width: 246;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+
+#cannebiere img, #port img, #mouettes img, #mer img, #panier img, #amina img
 {
     height: 114px;
-    width: 235px;
+    width: 231px;
     border-radius: 20px 20px 0 0;
     border: white 5px solid;
-    margin: auto;
     position: relative;
 }
 
-#description_cannebiere
+#description_cannebiere, #description_port, #description_mouettes
 {
-    border: white 5px solid;
     background-color: white;
+    border: white 5px solid;
     border-radius: 0 0 20px 20px;
-    width: 235px;
-    height: 75px;
+    width: 231px;
+    height: 80px;
     position: absolute;
+    bottom: 0;
 }
+
+#description_mer, #description_panier, #description_amina
+{
+    background-color: white;
+    border: white 5px solid;
+    border-radius: 0 0 20px 20px;
+    width: 231px;
+    height: 80px;
+    position: absolute;
+    bottom: -200px;
+}
+
+
 
 #bleu1, #bleu2, #bleu3, #bleu4, #bleu5, #bleu6, #bleu7
 {
@@ -261,6 +292,14 @@ nav a:hover
 .fa-star
 {
     color: #0065fc;
+    display: flex;
+    flex-direction: row;
+}
+
+.alignement_etoiles
+{
+display: flex;
+flex-direction: row;
 }
 
 /* Footer */
