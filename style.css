@@ -34,6 +34,11 @@ p
     font-size: 1em;
 }
 
+span
+{
+    font-weight: 700;
+}
+
 section a, aside a
 {
     text-decoration: none;
@@ -55,7 +60,7 @@ header
     height: 40px;
 }
 
-/*Navigation */
+/* Navigation */
 nav ul
 {
     list-style-type: none;
@@ -78,6 +83,7 @@ nav a:hover
 {
     color: #0065fc;
     border-top: #0065fc solid 2px;
+    border-top-width: 50px;
     padding-top: 40px;
 }
 
@@ -88,32 +94,41 @@ nav a:hover
 }
 
 /* Recherche */
+#recherche h1
+{
+    margin-bottom: -6px;
+}
+
 #zone_recherche
 {
     display: flex;
     align-items: center;
     vertical-align: center;
     margin-bottom: 16px;
+    margin-top: -10px;
 }
 
-.fa-location-dot
+#zone_recherche i
 {
     background-color: #f2f2f2;
+    width: 17px;
     border-radius: 13px 0 0 13px;
     padding: 17px;
 }
 
 #formulaire
 {
-    padding: 16px;
+    padding: 16.6px 0 13.6px 16px;
     border-style: none;
     border-top: #f2f2f2 2px solid;
     border-bottom: #f2f2f2 2px solid;
+    margin-left: -4px;
+    width: 233px;
 }
 
-#formulaire:focus
+#formulaire:placeholder
 {
-    font-weight: 800;
+    font-weight: 700;
     color: black;
     font-family: 'Raleway', sans-serif;
     font-size: 1em;
@@ -122,9 +137,9 @@ nav a:hover
 #bouton_rechercher
 {
     color: white;
-    font-weight: 800;
+    font-weight: 600;
     background-color: #0065fc;
-    padding: 16px;
+    padding: 16.6px 16px 13.8px 16px;
     border-radius: 0 13px 13px 0;
 }
 
@@ -135,7 +150,7 @@ nav a:hover
     margin: 16px 0 0 16px;
 }
 
-.fa-money-bill-wave, .fa-child, .fa-heart, .fa-dog
+.picto_filtres i
 {
     color: #0065fc;
     background-color: #deebff;
@@ -144,7 +159,7 @@ nav a:hover
     margin-right: 10px;
 }
 
-#economique, #familial, #romantique, #animaux
+.picto_filtres
 {
     display: flex;
     margin-right: 24px;
@@ -152,22 +167,18 @@ nav a:hover
     border: #f2f2f2 solid 3px;
     border-left-style: none;
     font-weight: 800;
+    padding-right: 22px;
 }
 
-#economique:hover, #familial:hover, #romantique:hover, #animaux:hover
+.picto_filtres:hover
 {
     background-color: #f2f2f2;
 }
 
-#economique:hover .fa-money-bill-wave, #familial:hover .fa-child, #romantique:hover .fa-heart, #animaux:hover .fa-dog
+.picto_filtres:hover i
 {
     background-color: #0065fc;
     color: #deebff;
-}
-
-#economique, #familial, #romantique, #animaux p
-{
-    padding-right: 22px;
 }
 
 #filtres h2
@@ -180,15 +191,13 @@ nav a:hover
 {
     display: flex;
     align-items: center;
-    margin-top: 16px;
+    margin: 25px 0 25px 15px;
 }
 
 #cercle
 {
-    height: 34px;
-    width: 34px;
-    min-height: 34px;
-    min-width: 34px;
+    height: 25px;
+    width: 25px;
     border: solid 2px #f2f2f2;
     border-radius: 100%;
     display: flex;
@@ -196,7 +205,7 @@ nav a:hover
     justify-content: center;
 }
 
-.fa-info
+#cercle i
 {
     display: inline-block;
     font-weight: 900;
@@ -208,7 +217,7 @@ nav a:hover
 
 #info p
 {
-    font-style: normal;
+    font-weight: 400;
     margin-left: 12px;
 }
 
@@ -223,44 +232,45 @@ nav a:hover
     flex-direction: column;
     justify-content: space-around;
     padding-left: 40px;
+    margin-right: 40px;
 }
 
-#hebergements h3, #hebergements p, #hebergements i
-{
-    margin-bottom: -3px;
-}
 
 #encadres_heb
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
+    justify-content: space-between;
+    align-content: space-between;
     height: 428px;
-    width: 801px;
+    width: 820px;
 }
 
-#cannebiere, #port, #mouettes, #mer, #panier, #amina
+.vignette_hebergements
 {
-    height: 199px;
-    width: 246;
+    height: 200px;
+    width: 236px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     margin: auto;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 7px 4px 9px #d7d7d7;
 }
 
-#cannebiere img, #port img, #mouettes img, #mer img, #panier img, #amina img
+.vignette_hebergements img
 {
     height: 114px;
     width: 231px;
     border-radius: 20px 20px 0 0;
     border: white 5px solid;
-    position: relative;
+    position: absolute;
+    top: 0;
 }
 
-#description_cannebiere, #description_port, #description_mouettes
+.description_hebergements
 {
     background-color: white;
     border: white 5px solid;
@@ -271,36 +281,83 @@ nav a:hover
     bottom: 0;
 }
 
-#description_mer, #description_panier, #description_amina
+.fa-star
 {
-    background-color: white;
-    border: white 5px solid;
-    border-radius: 0 0 20px 20px;
-    width: 231px;
-    height: 80px;
-    position: absolute;
-    bottom: -200px;
+    color: #0065fc;
 }
-
-
 
 #bleu1, #bleu2, #bleu3, #bleu4, #bleu5, #bleu6, #bleu7
 {
     color: #deebff;
 }
 
-.fa-star
+/* Populaires */
+#populaires
 {
-    color: #0065fc;
+    width: 420px;
+    height: 627px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.alignement_etoiles
+#titre_popu
 {
-display: flex;
-flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 16px;
 }
+
+#titre_popu .fa-arrow-trend-up
+{
+    border: black 3px solid;
+    border-right-style: none;
+    border-top-style: none;
+    align-self: center;
+}
+
+.vignette_popu
+{
+    width: 333px;
+    height: 134px;
+    border-radius: 20px;
+    display: flex;
+    align-content: space-around;
+    position: relative;
+    margin: auto;
+    box-shadow: 3px 14px 9px #d7d7d7;
+}
+
+.vignette_popu img
+{
+    width: 127px;
+    height: 134px;
+    border-radius: 20px 0 0 20px;
+    border: white 5px solid;
+    position: absolute;
+    left: 0;
+}
+
+.description_popu
+{
+    background-color: white;
+    border: white 5px solid;
+    border-radius: 0 20px 20px 0;
+    width: 201px;
+    height: 134px;
+    position: absolute;
+    right: 0;
+}
+
+/* Hébergements et populaires */
+#bloc_hebergements
+{
+    display: flex;
+    justify-content: space-around;
+}
+
 
 /* Footer */
 footer
