@@ -13,7 +13,7 @@
     <div id="bloc_page">
         <header>
             <div id="logo_reservia">
-                <img src="Images/Reservia@3x.png" alt="Logo Reservia" />
+                <img src="Images/Reservia@3x.png" alt="Logo Reservia">
             </div>
             <nav>
                 <ul>
@@ -69,13 +69,13 @@
             </div>
             <p>Plus de 500 logements sont disponibles dans cette ville</p>
         </section>
-        <div id="bloc_hebergements">
+        <div id="bloc_heb_popu">
             <section id="hebergements">
                 <h1>Hébergements à Marseille</h1>
-                <div id="encadres_heb">
+                <div id="bloc_hebergements">
                     <aside class="vignette_hebergements">
                     <a href="#">
-                        <img src="Images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Photo appartement Cannebière" />
+                        <img src="Images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Photo appartement Cannebière">
                         <div class="description_hebergements">
                             <h3>Auberge la Cannebière</h3>
                             <p>Nuit à partir de <span>25€</span></p>
@@ -85,7 +85,7 @@
                     </aside>
                     <aside class="vignette_hebergements">
                     <a href="#">
-                        <img src="Images/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Photo appartement Port" />
+                        <img src="Images/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Photo appartement Port">
                         <div class="description_hebergements">
                             <h3>Hôtel du port</h3>
                             <p>Nuit à partir de <span>52€</span></p>
@@ -95,7 +95,7 @@
                     </aside>
                     <aside class="vignette_hebergements">
                     <a href="#">
-                        <img src="Images/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Photo appartement Mouettes" />
+                        <img src="Images/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Photo appartement Mouettes">
                         <div class="description_hebergements">
                             <h3>Hôtel Les mouettes</h3>
                             <p>Nuit à partir de <span>76€</span></p>
@@ -105,7 +105,7 @@
                     </aside>
                     <aside class="vignette_hebergements">
                     <a href="#">
-                        <img src="Images/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Photo appartement mer" />
+                        <img src="Images/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Photo appartement mer">
                         <div class="description_hebergements">
                             <h3>Hôtel de la mer</h3>
                             <p>Nuit à partir de <span>46€</span></p>
@@ -115,7 +115,7 @@
                     </aside>
                     <aside class="vignette_hebergements">
                     <a href="#">
-                        <img src="Images/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Photo appartement Panier" />
+                        <img src="Images/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Photo appartement Panier">
                         <div class="description_hebergements">
                             <h3>Auberge Le Panier</h3>
                             <p>Nuit à partir de <span>23€</span></p>
@@ -125,7 +125,7 @@
                     </aside>
                     <aside class="vignette_hebergements">
                     <a href="#">
-                        <img src="Images/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Photo appartement Amina" />
+                        <img src="Images/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Photo appartement Amina">
                         <div class="description_hebergements">
                             <h3>Hôtel chez Amina</h3>
                             <p>Nuit à partir de <span>96€</span></p>
@@ -141,70 +141,102 @@
                     <h1>Les plus populaires</h1>
                     <!-- Icone croissance--> <i class="fa-solid fa-arrow-trend-up"></i>
                 </div>
-                <aside class="vignette_popu">
-                    <a href="#">
-                        <img src="Images/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo appartement Matin" />
-                        <div class="description_popu">
-                            <h3>Hôtel Le soleil du<br />matin</h3>
-                            <p>Nuit à partir de <span>128€</span></p><br />
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                    </a>
-                </aside>
-                <aside class="vignette_popu">
-                    <a href="#">
-                        <img src="Images/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Photo appartement Cœur de l'eau" />
-                        <div class="description_popu">
-                            <h3>Au cœur de l'eau<br />Chambres d'hôtes</h3>
-                            <p>Nuit à partir de <span>71€</span></p><br />        
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star" id="bleu6"></i>
-                        </div>
-                    </a>
-                </aside>
-                <aside class="vignette_popu">
-                    <a href="#">
-                        <img src="Images/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Photo appartement Bleu" />
-                        <div class="description_popu">
-                            <h3>Hôtel Tout bleu et<br />Blanc</h3>
-                            <p>Nuit à partir de <span>68€</span></p><br />
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star" id="bleu7"></i>
-                        </div>
-                    </a>
-                </aside>
+                <div id="bloc_popu">
+                    <aside class="vignette_popu">
+                        <a href="#">
+                            <img src="Images/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo appartement Matin">
+                            <div class="description_popu">
+                                <h3>Hôtel Le soleil du<br />matin</h3>
+                                <p>Nuit à partir de <span>128€</span></p><br />
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            </div>
+                        </a>
+                    </aside>
+                    <aside class="vignette_popu">
+                        <a href="#">
+                            <img src="Images/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Photo appartement Cœur de l'eau">
+                            <div class="description_popu">
+                                <h3>Au cœur de l'eau<br />Chambres d'hôtes</h3>
+                                <p>Nuit à partir de <span>71€</span></p><br />        
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star" id="bleu6"></i>
+                            </div>
+                        </a>
+                    </aside>
+                    <aside class="vignette_popu">
+                        <a href="#">
+                            <img src="Images/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Photo appartement Bleu">
+                            <div class="description_popu">
+                                <h3>Hôtel Tout bleu et<br />Blanc</h3>
+                                <p>Nuit à partir de <span>68€</span></p><br />
+                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star" id="bleu7"></i>
+                            </div>
+                        </a>
+                    </aside>
+                </div>
             </section>
         </div>
         <section id="activites">
             <h1>Activités à Marseille</h1>
-                <aside id="vieux_port">
-                    <a href="#">
-                        <h3>Vieux Port</h3>
-                    </a>
-                </aside>
-                <aside id="pomegues">
-                    <a href="#">
-                        <h3>Fort de Pomègues</h3>
-                    </a>
-                </aside>
-                <aside id="frioul">
-                    <a href="#">
-                        <h3>Îles de Frioul</h3>
-                    </a>
-                </aside>
-                <aside id="calanques">
-                    <a href="#">
-                        <h3>Parc National des Calanques</h3>
-                    </a>
-                </aside>
-                <aside id="garde">
-                    <a href="#">
-                        <h3>Notre-Dame-de-la-Garde</h3>
-                    </a>
-                </aside>
-                <aside id="longchamp">
-                    <a href="#">
-                        <h3>Parc Longchamp</h3>
-                    </a>
-                </aside>
+                <div id="bloc_activites">
+                    <div id="Bloc1">
+                        <aside class="grande_vignette">
+                            <div id="Bloc1">
+                                <a href="#">
+                                    <img src="Images/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo activité Vieux Port">
+                                    <div class="description_activite">
+                                        <h3>Vieux Port</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </aside>
+                    </div>
+                    <div id="Bloc2">
+                        <aside class="moyenne_vignette" id="pomegues">
+                            <a href="#">
+                                <img src="Images/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Photo activité Pomègues">
+                                <div class="description_activite">
+                                    <h3>Fort de Pomègues</h3>
+                                </div>
+                            </a>
+                        </aside>
+                        <aside class="petite_vignette" id="frioul">
+                            <a href="#">
+                                <img src="Images/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Photo activité Frioul">
+                                <div class="description_activite">
+                                    <h3>Îles de Frioul</h3>
+                                </div>
+                            </a>
+                        </aside>
+                    </div>
+                    <div id="Bloc3">
+                        <aside class="grande_vignette" id="calanques">
+                            <a href="#">
+                                <img src="Images/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Photo activité Calanques">
+                                <div class="description_activite">
+                                    <h3>Parc National des Calanques</h3>
+                                </div>
+                            </a>
+                        </aside>
+                    </div>
+                    <div id="Bloc4">
+                        <aside class="petite_vignette" id="garde">
+                            <a href="#">
+                                <img src="Images/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Photo activité Notre-Dame-de-la-Garde">
+                                <div class="description_activite">
+                                    <h3>Notre-Dame-de-la-Garde</h3>
+                                </div>
+                            </a>
+                        </aside>
+                        <aside class="moyenne_vignette" id="longchamp">
+                            <a href="#">
+                                <img src="Images/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Photo activité Longchamps">
+                                <div class="description_activite">
+                                    <h3>Parc Longchamp</h3>
+                                </div>
+                            </a>
+                        </aside>
+                    </div>
+                </div>
         </section>
     </div>
     <footer>
