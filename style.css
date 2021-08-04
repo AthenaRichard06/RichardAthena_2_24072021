@@ -134,14 +134,15 @@ nav a:hover
     padding: 16px 0 13.6px 16px;
 }
 
-#bouton_rechercher
+.bouton_rechercher
 {
     color: white;
     font-weight: 600;
     background-color: #0065fc;
-    padding: 16.6px 16px 13.8px 16px;
+    padding: 17px 16px 17px 16px;
     border-radius: 0 13px 13px 0;
     cursor: pointer;
+    border-style: none;
 }
 
 /* Filtres */
