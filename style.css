@@ -47,8 +47,8 @@ header
 {
     display: flex;
     justify-content: space-between;
-    padding-right: 80px;
-    padding-left: 80px;
+    margin-right: 80px;
+    margin-left: 80px;
 }
 
 #logo_reservia img
@@ -91,7 +91,7 @@ nav a:hover
 /* Recherche */
 #recherche
 {
-    padding-left: 80px;
+    margin-left: 80px;
 }
 
 #recherche h1
@@ -113,17 +113,19 @@ nav a:hover
     background-color: #f2f2f2;
     width: 17px;
     border-radius: 13px 0 0 13px;
-    padding: 17px;
+    padding: 20px 15px 17px 17px;
 }
 
 #formulaire
 {
-    padding: 16.6px 0 13.6px 16px;
+    padding: 16.4px 0 14px 16px;
     border-style: none;
     border-top: #f2f2f2 2px solid;
     border-bottom: #f2f2f2 2px solid;
     margin-left: -4px;
     width: 233px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
 }
 
 #formulaire:focus
@@ -131,7 +133,9 @@ nav a:hover
     font-weight: 700;
     color: black;
     font-family: 'Raleway', sans-serif;
-    padding: 16px 0 13.6px 16px;
+    padding: 16px 0 14px 16px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
 }
 
 .bouton_rechercher
@@ -143,6 +147,8 @@ nav a:hover
     border-radius: 0 13px 13px 0;
     cursor: pointer;
     border-style: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
 }
 
 /* Filtres */
@@ -150,8 +156,8 @@ nav a:hover
 {
     display: flex;
     flex-wrap: wrap;
-    margin: 16px 0 0 16px;
-    padding-left: 80px;
+    padding-left: 16px;
+    margin-left: 80px;
 }
 
 .picto_filtres
@@ -177,9 +183,8 @@ nav a:hover
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: -2px;
+    margin: -2px 16px -2px -2px;
     color: #0065FC;
-    margin-right: 16px;
 }
 
 .picto_filtres:hover
@@ -204,12 +209,14 @@ nav a:hover
 {
     display: flex;
     align-items: center;
-    margin: 20px 0 20px 10px;
-    padding-left: 80px;
+    margin: 0 0 20px 80px;
+    padding-left: 10px;
 }
 
-#cercle
+#cercle i
 {
+    font-weight: 900;
+    color: #0065fc;
     height: 25px;
     width: 25px;
     border: solid 2px #f2f2f2;
@@ -217,12 +224,6 @@ nav a:hover
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#cercle i
-{
-    font-weight: 900;
-    color: #0065fc;
 }
 
 #info p
@@ -237,8 +238,8 @@ nav a:hover
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-left: 80px;
-    padding-right: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 /* Hébergements */
@@ -251,14 +252,20 @@ nav a:hover
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-right: 55px;
+}
+
+#hebergements h1
+{
     padding-left: 40px;
-    margin-right: 40px;
+    padding-top: 16px;
 }
 
 #hebergements h2
 {
-    margin-bottom: 25px;
+    padding-bottom: 25px;
     cursor: pointer;
+    padding-left: 40px;
 }
 
 
@@ -267,7 +274,7 @@ nav a:hover
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: space-between;
+    margin: auto;
     height: 428px;
     width: 820px;
 }
@@ -423,8 +430,8 @@ nav a:hover
 /* Section activités */
 #activites
 {
-    padding-right: 80px;
-    padding-left: 80px;
+    margin-right: 80px;
+    margin-left: 80px;
 }
 
 #activites h1
@@ -524,6 +531,49 @@ nav a:hover
     bottom: 0;
 }
 
+@media screen and (max-width: 1024px)
+{
+    #activites
+    {
+        margin: auto;
+    }
+
+    #activites h1
+    {
+        margin-left: 75px;
+        margin-bottom: 30px;
+    }
+
+    #bloc_activites
+    {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    #Bloc1, #Bloc2, #Bloc3, #Bloc4
+    {
+        width: auto;
+        height: auto;     
+    }
+
+    .grande_vignette, .moyenne_vignette, .petite_vignette
+    {
+        width: 334px;
+        height: 190px;
+        margin-bottom: 20px;
+    }
+
+    .grande_vignette img, .moyenne_vignette img, .petite_vignette img
+    {
+        width: 334px;
+        height: 135px;
+        object-fit: cover;
+    }
+
+}
+
+
 /* Footer */
 footer
 {
@@ -549,4 +599,21 @@ footer
 {
     margin-bottom: 18px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1024px)
+{
+    footer
+    {
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+    }
+
+    #a_propos, #nos_hebergements, #assistance
+    {
+        padding-left: 75px;
+    }
 }
