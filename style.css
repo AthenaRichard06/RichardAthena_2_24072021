@@ -151,6 +151,34 @@ nav a:hover
     font-size: 1em;
 }
 
+.loupe
+{
+    padding: 17px 16px 17px 16px;
+    border-radius: 0 13px 13px 0;
+    cursor: pointer;
+    border-style: none;
+    display: none;
+}
+
+.loupe i
+{
+    color: white;
+    background-color: #0065fc;
+}
+
+@media screen and (max-width: 600px)
+{
+    .loupe
+    {
+        display: initial;
+    }
+
+    .bouton_rechercher
+    {
+        display: none;
+    }
+}
+
 /* Filtres */
 #filtres
 {
@@ -460,8 +488,9 @@ nav a:hover
 #Bloc2, #Bloc4
 {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-content: space-between;
 }
 
 .grande_vignette
@@ -533,6 +562,33 @@ nav a:hover
 
 @media screen and (max-width: 1024px)
 {
+    #bloc_activites
+    {
+        flex-wrap: wrap;
+    }
+
+    #Bloc2, #Bloc4
+    {
+        flex-wrap: wrap;
+        display: contents;
+    }
+
+    .grande_vignette, .moyenne_vignette, .petite_vignette
+    {
+        width: 334px;
+        height: 190px;
+    }
+
+    .grande_vignette img, .moyenne_vignette img, .petite_vignette img
+    {
+        width: 334px;
+        height: 135px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 850px)
+{
     #activites
     {
         margin: auto;
@@ -601,7 +657,7 @@ footer
     cursor: pointer;
 }
 
-@media screen and (max-width: 1024px)
+@media screen and (max-width: 850px)
 {
     footer
     {
