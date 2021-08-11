@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Reservia</title>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +19,8 @@
             <ul>
                 <li><a href="#hebergements">Hébergements</a></li>
                 <li><a href="#activites">Activités</a></li>
-                <li id="inscription">S'inscrire</li>
             </ul>
+            <p id="inscription">S'inscrire</p>
         </nav>
     </header>
     <div id="recherche">
@@ -38,21 +39,23 @@
     </div>
     <div id="filtres">
         <h2>Filtres</h2>
-        <div class="picto_filtres">
-            <!-- Icone billet --> <i class="fa-solid fa-money-bill-wave"></i>
-            <p>Économique</p>
-        </div>
-        <div class="picto_filtres">
-            <!-- Icone enfant --> <i class="fa-solid fa-child"></i>
-            <p>Familial</p>
-        </div>
-        <div class="picto_filtres">
-            <!-- Icone coeur --> <i class="fa-solid fa-heart"></i>
-            <p>Romantique</p>
-        </div>
-        <div class="picto_filtres">
-            <!-- Icone chien --> <i class="fa-solid fa-dog"></i>
-            <p>Animaux autorisés</p>
+        <div id="bloc_filtres">
+            <div class="picto_filtres" id="Eco">
+                <!-- Icone billet --> <i class="fa-solid fa-money-bill-wave"></i>
+                <p>Économique</p>
+            </div>
+            <div class="picto_filtres" id="Famille">
+                <!-- Icone enfant --> <i class="fa-solid fa-child"></i>
+                <p>Familial</p>
+            </div>
+            <div class="picto_filtres" id="Romance">
+                <!-- Icone coeur --> <i class="fa-solid fa-heart"></i>
+                <p>Romantique</p>
+            </div>
+            <div class="picto_filtres" id="Animaux">
+                <!-- Icone chien --> <i class="fa-solid fa-dog"></i>
+                <p>Animaux autorisés</p>
+            </div>
         </div>
     </div>
     <div id="info">
