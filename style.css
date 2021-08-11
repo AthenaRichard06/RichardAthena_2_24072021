@@ -264,10 +264,18 @@ nav a:hover
 #bloc_heb_popu
 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-left: 80px;
     margin-right: 80px;
+}
+
+@media screen and (max-width: 1224px)
+{
+    #bloc_heb_popu
+    {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 }
 
 /* Hébergements */
@@ -301,7 +309,7 @@ nav a:hover
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: auto;
     height: 428px;
     width: 820px;
@@ -367,6 +375,39 @@ nav a:hover
     color: #deebff;
 }
 
+@media screen and (max-width: 991px)
+{
+    #hebergements
+    {
+        margin-right: 0;
+        background-color: white;
+        width: 420px;
+        height: 1386px;
+    }
+    
+    #bloc_hebergements
+    {
+        display: initial;
+        justify-content: center;
+    }
+
+    .vignette_hebergements
+    {
+        width: 334px;
+        margin-left: 35px;
+    }
+
+    .vignette_hebergements img
+    {
+        width: 324px;
+    }
+
+    .description_hebergements
+    {
+        width: 334px;
+    }
+}
+
 /* Populaires */
 #populaires
 {
@@ -400,17 +441,16 @@ nav a:hover
     width: 333px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     margin: auto;
 }
 
 .vignette_popu
 {
-    width: 333px;
+    width: 334px;
     height: 134px;
     border-radius: 20px;
-    display: flex;
-    align-content: space-around;
+    align-content: space-between;
     position: relative;
     box-shadow: 3px 14px 9px #d7d7d7;
     margin-bottom: 33px;
@@ -453,6 +493,14 @@ nav a:hover
 .description_popu .etoiles
 {
     padding-left: 10px;
+}
+
+@media screen and (max-width: 1224px)
+{
+    #populaires
+    {
+        margin-bottom: 20px;
+    }
 }
 
 /* Section activités */
@@ -585,7 +633,12 @@ nav a:hover
         height: 135px;
         object-fit: cover;
     }
-}
+
+    .description_activite
+    {
+        width: 334px;
+        height: 55px;
+    }
 
 @media screen and (max-width: 850px)
 {
