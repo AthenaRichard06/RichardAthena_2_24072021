@@ -5,7 +5,6 @@ body
     font-weight: 400;
     margin: auto;
     padding-top: 30px;
-    width: 1440px;
 }
 
 h1
@@ -113,7 +112,7 @@ nav a:hover
 
 #zone_recherche
 {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     vertical-align: center;
     margin-bottom: 16px;
@@ -193,6 +192,26 @@ nav a:hover
     display: flex;
 }
 
+#Eco
+{
+    width: 179px;
+}
+
+#Famille
+{
+    width: 144px;
+}
+
+#Romance
+{
+    width: 177px;
+}
+
+#Animaux
+{
+    width: 226px;
+}
+
 .picto_filtres
 {
     display: flex;
@@ -203,6 +222,7 @@ nav a:hover
     margin-bottom: 16px;
     font-weight: 800;
     padding-right: 16px;
+    flex-wrap: nowrap;
 }
 
 .picto_filtres i
@@ -272,6 +292,7 @@ nav a:hover
     justify-content: space-between;
     margin-left: 80px;
     margin-right: 80px;
+    width: 1337px;
 }
 
 /* Hébergements */
@@ -285,6 +306,7 @@ nav a:hover
     flex-direction: column;
     justify-content: space-around;
     margin-right: 55px;
+    order: 1;
 }
 
 #hebergements h1
@@ -381,6 +403,7 @@ nav a:hover
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    order: 2;
 }
 
 #titre_popu
@@ -479,15 +502,18 @@ nav a:hover
     display: flex;
     justify-content: space-between;
     margin-bottom: 62px;
-}
-
-#Bloc1, #Bloc2, #Bloc3, #Bloc4
-{
-    width: 302px;
     height: 446px;
+    width: 1337px;
 }
 
-#Bloc2, #Bloc4
+#Bloc1, #Bloc2
+{
+    display: flex;
+    justify-content: space-between;
+    width: 647px;
+}
+
+.deux_vignettes
 {
     display: flex;
     flex-direction: column;
@@ -501,6 +527,7 @@ nav a:hover
     position: relative;
     box-shadow: 0 4px 9px #d7d7d7;
     border-radius: 20px;
+    align-self: flex-start;
 }
 
 .grande_vignette img
@@ -592,12 +619,115 @@ footer
 /* Tablettes */
 @media screen and (min-width: 768px) and (max-width: 1024px)
 {
+    /* Filtres */
+    #bloc_filtres
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
+    /* Hébergements et populaires */
+    #bloc_heb_popu
+    {
+        flex-direction: column-reverse;
+    }
+
+    #populaires
+    {
+        height: auto;
+        width: auto;
+        max-width: 1024px;
+        margin-bottom: 60px;
+        padding: 0 17px 0 17px;
+    }
+    
+    #titre_popu
+    {
+        justify-content: space-between;
+        padding-left: 40px;
+        padding-top: 16px;
+    }
+    
+    #bloc_popu
+    {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .vignette_popu
+    {
+        display: block;
+    }
+
+    /* Activités */
+    #activites
+    {
+        width: auto;
+        max-width: 1024px;
+        margin: auto
+    }
+    
+    #bloc_activites
+    {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #Bloc1, #Bloc2
+    {
+        display: flex;
+        justify-content: space-between;
+        width: auto;
+    }
+
+    .deux_vignettes
+    {
+        display: inherit;
+        flex-direction: unset;
+    }
+    
+    .grande_vignette, .moyenne_vignette, .petite_vignette
+    {
+        width: 334px;
+        height: 190px;
+        margin-bottom: 24px;
+    }
+
+    .grande_vignette img, .moyenne_vignette img, .petite_vignette img
+    {
+        width: 334px;
+        height: 135px;
+        object-fit: cover;
+    }
+
+    .description_activite
+    {
+        width: 334px;
+        height: 55px;
+    }
+
+    /* Footer */
+    footer
+    {
+        width: 100%;
+        min-width: 768px;
+    }
 }
 
 /* Mobiles */
 @media screen and (max-width: 767px)
 {
+    /* Changements sur l'ensemble de la page */
+    body
+    {
+        width: initial;
+    }
+    
+    header, #recherche, #filtres, #info, #bloc_heb_popu, #populaires, #activites
+    {
+        margin: auto;
+    }
+    
     /* Header */
     header
     {
@@ -611,27 +741,42 @@ footer
 
     nav ul
     {
-        text-align: center;
         display: flex;
-        border-bottom: 2px solid #f2f2f2;
     }
 
     nav a
     {
         display: inline-block;
+        text-align: center;
         flex: 1;
-        flex-basis: 50%;
-        margin-right: 0;
+        width: 50%;
+        padding: 0 25px 17px 25px;
+        border-bottom: 3px solid #f2f2f2;
+    }
+
+    nav a:hover
+    {
+        color: #0065fc;
+        border-top: none;
+        border-bottom: 3px solid #0065fc;
+        padding-bottom: 17px;
+        padding-top: 0;
+        margin-bottom: -19px;
     }
 
     #inscription
     {
         position: absolute;
         top: 27px;
-        right: 10px;
+        right: 0;
     }
     
     /* Recherche */
+    #zone_recherche
+    {
+        width: 100%;
+    }
+    
     .bouton_rechercher
     {
         display: none;
@@ -653,38 +798,19 @@ footer
         display: flex;
         flex-wrap: wrap;
     }
-
-    #Eco
-    {
-        width: 179px;
-    }
-
-    #Famille
-    {
-        width: 144px;
-    }
-
-    #Romance
-    {
-        width: 177px;
-    }
-
-    #Animaux
-    {
-        width: 226px;
-    }
     
     /* Hébergements et populaires */
     #bloc_heb_popu
     {
-        display: inherit;
+        flex-direction: column-reverse;
+        margin-left: 0;
+        margin-right: 0;
     }
     
     /* Hébergements */
     #hebergements
     {
-        order: 2;
-        width: 100%;
+        width: auto;
         height: auto;
         background-color: white;
     }
@@ -699,7 +825,6 @@ footer
         display: inherit;
         flex-direction: column;
         height: auto;
-        width: 100%;
     }
 
     .vignette_hebergements
@@ -721,27 +846,29 @@ footer
     /* Populaires */
     #populaires
     {
-        order: 1;
         border-radius: 0;
-        width: 100%;
         height: auto;
     }
     
     /* Activités */
-    #bloc_activites
-    {
-        display: inherit;
-    }
-
-    #Bloc1, #Bloc2, #Bloc3, #Bloc4
+    #activites
     {
         width: auto;
-        height: inherit;
+    }
+    
+    #bloc_activites
+    {
+        flex-direction: column;
     }
 
-    #Bloc2, #Bloc4
+    #Bloc1, #Bloc2
     {
-        display: inherit
+        flex-direction: column;
+    }
+
+    .deux_vignettes
+    {
+        display: inherit;
     }
     
     .grande_vignette, .moyenne_vignette, .petite_vignette
@@ -768,7 +895,7 @@ footer
     footer
     {
         height: auto;
-        width: 100%;
+        min-width: 100%;
         display: inherit;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -777,5 +904,19 @@ footer
     #a_propos, #nos_hebergements, #assistance
     {
         margin-bottom: 49px;
+    }
+}
+
+/* Petits mobiles */
+@media screen and (max-width: 320px)
+{
+    #formulaire
+    {
+        width: 75%;
+    }
+
+    .loupe
+    {
+        margin-left: -22px;
     }
 }
