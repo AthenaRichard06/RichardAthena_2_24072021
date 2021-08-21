@@ -611,15 +611,22 @@ footer
     cursor: pointer;
 }
 
+
 /* Media Queries */
 /* Petit ordinateur */
 @media screen and (max-width: 1024px)
 {
     /* Changements sur l'ensemble de la page */
+    header
+    {
+        margin-right: inherit;
+    }
+    
     #filtres, #info
     {
         padding-left: inherit;
     }
+
     
     /* Filtres */
     #bloc_filtres
@@ -742,8 +749,116 @@ footer
     }
 }
 
+
+/* Tablettes */
+@media screen and (max-width: 768px)
+{
+    /* Changements sur l'ensemble de la page */
+    header, #recherche, #filtres, #info, a_propos, #nos_hebergements, #assistance
+    {
+        margin-left: 50px;
+    }
+
+    /* Populaires */
+    #populaires
+    {
+        width: 420px;
+        align-items: center;
+    }
+
+    #titre_popu
+    {
+        padding-left: inherit;
+    }
+
+    #bloc_popu
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Hébergements */
+    #hebergements
+    {
+        width: inherit;
+        height: auto;
+    }
+
+    #bloc_hebergements
+    {
+        width: inherit;
+        height: inherit;
+        justify-content: space-evenly;
+    }
+    
+    .vignette_hebergements
+    {
+        width: 334px;
+    }
+
+    .vignette_hebergements img
+    {
+        width: 324px;
+        object-fit: cover;
+    }
+
+    .description_hebergements
+    {
+        width: 334px;
+    }
+
+    /* Activités */
+    #activites h1
+    {
+        margin-left: 40px;
+    }
+    
+    #bloc_activites
+    {
+        width: 768px;
+        height: inherit;
+        justify-content: space-evenly;
+    }
+
+    #vignette_milieu_1
+    {
+        margin-right: inherit;
+        margin-left: 0px;
+    }
+
+    #Bloc1 .deux_vignettes
+    {
+        flex-direction: column;
+        margin-left: 33.3px;
+    }
+
+    #Bloc2
+    {
+        flex-direction: column;
+        margin-top: -214px;
+    }
+
+    #Bloc2 .deux_vignettes
+    {
+        flex-direction: row;
+    }
+
+    #vignette_milieu_2
+    {
+        margin-right: 33.3px;
+        margin-left: inherit;
+    }
+
+    /* Footer */
+    #a_propos, #nos_hebergements, #assistance
+    {
+        margin-left: 50px;
+    }
+}
+
+
 /* Mobiles */
-@media screen and (max-width: 767px)
+@media screen and (max-width: 425px)
 {
     /* Changements sur l'ensemble de la page */
     body
@@ -849,7 +964,7 @@ footer
         height: auto;
     }
 
-    .vignette_hebergements
+    /*.vignette_hebergements
     {
         width: 334px;
     }
@@ -863,7 +978,7 @@ footer
     .description_hebergements
     {
         width: 324px;
-    }
+    }*/
     
     /* Populaires */
     #populaires
