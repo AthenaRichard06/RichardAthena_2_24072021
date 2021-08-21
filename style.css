@@ -306,7 +306,6 @@ nav a:hover
     flex-direction: column;
     justify-content: space-around;
     margin-right: 55px;
-    order: 1;
 }
 
 #hebergements h1
@@ -403,7 +402,6 @@ nav a:hover
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    order: 2;
 }
 
 #titre_popu
@@ -425,8 +423,6 @@ nav a:hover
 {
     height: 500px;
     width: 333px;
-    display: flex;
-    flex-direction: column;
     margin: auto;
 }
 
@@ -485,6 +481,7 @@ nav a:hover
 {
     margin-right: 80px;
     margin-left: 80px;
+    margin-bottom: 62px;
 }
 
 #activites h1
@@ -501,7 +498,6 @@ nav a:hover
 {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 62px;
     height: 446px;
     width: 1337px;
 }
@@ -616,9 +612,15 @@ footer
 }
 
 /* Media Queries */
-/* Tablettes */
-@media screen and (min-width: 768px) and (max-width: 1024px)
+/* Petit ordinateur */
+@media screen and (max-width: 1024px)
 {
+    /* Changements sur l'ensemble de la page */
+    #filtres, #info
+    {
+        padding-left: inherit;
+    }
+    
     /* Filtres */
     #bloc_filtres
     {
@@ -630,60 +632,75 @@ footer
     #bloc_heb_popu
     {
         flex-direction: column-reverse;
+        width: inherit;
+        align-items: center;
+        margin-left: inherit;
+        margin-right: inherit;
     }
 
+    /* Populaires */
     #populaires
     {
-        height: auto;
-        width: auto;
-        max-width: 1024px;
         margin-bottom: 60px;
-        padding: 0 17px 0 17px;
-    }
-    
-    #titre_popu
-    {
-        justify-content: space-between;
-        padding-left: 40px;
-        padding-top: 16px;
-    }
-    
-    #bloc_popu
-    {
-        flex-direction: row;
-        justify-content: space-around;
+        width: 1013px;
+        height: inherit;
     }
 
-    .vignette_popu
+    #titre_popu
     {
-        display: block;
+        justify-content: flex-start;
+        padding-left: 106.5px;
+    }
+
+    #titre_popu h1
+    {
+        margin-right: 40px;
+    }
+
+    #bloc_popu
+    {
+        display: flex;
+        flex-direction: row;
+        width: inherit;
+        height: inherit;
+        justify-content: space-around;
+        padding-bottom: 17px;
+    }
+
+    /* Hébergements */
+    #hebergements
+    {
+        margin: auto;
     }
 
     /* Activités */
     #activites
     {
-        width: auto;
-        max-width: 1024px;
-        margin: auto
+        margin-right: inherit;
+        margin-left: inherit;
+    }
+
+    #activites h1
+    {
+        margin-left: 106.5px;
     }
     
     #bloc_activites
     {
+        width: 1013px;
         flex-wrap: wrap;
-        justify-content: space-between;
+        margin: auto;
     }
 
     #Bloc1, #Bloc2
     {
-        display: flex;
-        justify-content: space-between;
         width: auto;
     }
 
     .deux_vignettes
     {
         display: inherit;
-        flex-direction: unset;
+        flex-direction: inherit;
     }
     
     .grande_vignette, .moyenne_vignette, .petite_vignette
@@ -692,6 +709,13 @@ footer
         height: 190px;
         margin-bottom: 24px;
     }
+
+    #vignette_milieu_1, #vignette_milieu_2
+    {
+        margin-right: 5.5px;
+        margin-left: 5.5px;
+    }
+
 
     .grande_vignette img, .moyenne_vignette img, .petite_vignette img
     {
@@ -709,8 +733,12 @@ footer
     /* Footer */
     footer
     {
-        width: 100%;
-        min-width: 768px;
+        padding-left: inherit;
+    }
+
+    #a_propos
+    {
+        margin-left: 80px;
     }
 }
 
@@ -719,11 +747,6 @@ footer
 {
     /* Changements sur l'ensemble de la page */
     body
-    {
-        width: initial;
-    }
-    
-    header, #recherche, #filtres, #info, #bloc_heb_popu, #populaires, #activites
     {
         margin: auto;
     }
@@ -748,8 +771,7 @@ footer
     {
         display: inline-block;
         text-align: center;
-        flex: 1;
-        width: 50%;
+        width: auto;
         padding: 0 25px 17px 25px;
         border-bottom: 3px solid #f2f2f2;
     }
@@ -853,12 +875,15 @@ footer
     /* Activités */
     #activites
     {
+        height: inherit !important;
         width: auto;
     }
     
     #bloc_activites
     {
         flex-direction: column;
+        height: inherit;
+        width: inherit;
     }
 
     #Bloc1, #Bloc2
@@ -895,7 +920,6 @@ footer
     footer
     {
         height: auto;
-        min-width: 100%;
         display: inherit;
         padding-top: 20px;
         padding-bottom: 20px;
@@ -908,7 +932,7 @@ footer
 }
 
 /* Petits mobiles */
-@media screen and (max-width: 320px)
+@media screen and (max-width: 375px)
 {
     #formulaire
     {
