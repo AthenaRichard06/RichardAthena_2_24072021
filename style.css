@@ -703,7 +703,6 @@ footer
         margin-left: 5.5px;
     }
 
-
     .grande_vignette img, .moyenne_vignette img, .petite_vignette img
     {
         width: 334px;
@@ -779,7 +778,6 @@ footer
     .vignette_hebergements img
     {
         width: 324px;
-        object-fit: cover;
     }
 
     .description_hebergements
@@ -955,7 +953,7 @@ footer
 
     #titre_popu
     {
-        margin-left: 40px;
+        margin-left: 45.5px;
     }
     
     /* Hébergements */
@@ -968,12 +966,13 @@ footer
 
     #hebergements h1
     {
-        padding-left: 0;
+        padding-left: inherit;
     }
 
     #hebergements h2
     {
         padding-bottom: inherit;
+        padding-left: inherit;
     }
     
     #bloc_hebergements
@@ -991,6 +990,11 @@ footer
         margin-bottom: 40px;
         align-items: center;
     }
+
+    #activites h1
+    {
+        margin-left: 45.5px;
+    }
     
     #bloc_activites
     {
@@ -1007,6 +1011,7 @@ footer
     {
         flex-direction: inherit;
         margin-left: inherit;
+        width: 334px;
     }
 
     #Bloc2
@@ -1017,6 +1022,7 @@ footer
     #Bloc2 .deux_vignettes
     {
         flex-direction: inherit;
+        width: 334px;
     }
     
     /* Footer */
@@ -1035,9 +1041,27 @@ footer
     }
 }
 
+
+/* Moyens mobiles */
+@media screen and (max-width: 376px)
+{
+    #hebergements h1, #hebergements h2
+    {
+        padding-left: 25px;
+    }
+}
+
+
 /* Petits mobiles */
 @media screen and (max-width: 320px)
 {
+    /* Changements sur l'ensemble de la page */
+    #hebergements, .vignette_popu, .vignette_hebergements, .vignette_hebergements img, #activites, #bloc_activites, #Bloc1, #Bloc2, #Bloc1 .deux_vignettes, #Bloc2 .deux_vignettes, .grande_vignette, .moyenne_vignette, .petite_vignette, .grande_vignette img, .moyenne_vignette img, .petite_vignette img, .description_activite
+    {
+        width: 279px;
+    }
+    
+    /* Recherche */
     #formulaire
     {
         width: 75%;
@@ -1046,5 +1070,38 @@ footer
     .loupe
     {
         margin-left: -22px;
+    }
+
+    /* Populaires */
+    #titre_popu
+    {
+        margin-left: 20.5px;
+    }
+    
+    .vignette_popu img
+    {
+        width: 102px;
+    }
+
+    .description_popu
+    {
+        width: 181px;
+    }
+
+    /* Hébergement */
+        #hebergements h1, #hebergements h2
+    {
+        padding-left: inherit;
+    }
+
+    .description_hebergements
+    {
+        width: 289px;
+    }
+
+    /* Activités */
+    #activites h1
+    {
+        margin-left: inherit;
     }
 }
